@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Password Generator</h1>
+      <div class="password_container">
+        <h2 id="password">*********</h2>
+        <button id="copy_btn">
+          <i class="fa-solid fa-copy"></i>
+          <span class="msg_copied">copied</span>
+        </button>
+      </div>
+      <div class="container">
+        <div class="form_control chr_length">
+          <label>character: <span id="length"></span></label>
+          <input type="range" min="6" value="6" max="40" id="password_range" />
+        </div>
+        <div class="form_control">
+          <input type="checkbox" id="upper" name="uppers" />
+          <label for="upper">Include upper case letters</label>
+        </div>
+        <div class="form_control">
+          <input type="checkbox" id="lower" name="lowers" />
+          <label for="lower">Include Lowercase letters</label>
+        </div>
+        <div class="form_control">
+          <input type="checkbox" id="number" name="numbers" />
+          <label for="number">Include Numbers</label>
+        </div>
+        <div class="form_control">
+          <input type="checkbox" id="symbol" name="symbols" />
+          <label for="symbol">Include Symbols</label>
+        </div>
+        <div class="strength_container">
+          <h3>Strength:</h3>
+          <h3 id="strength" class="strength"></h3>
+        </div>
+        <button id="generate-btn">Generate</button>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,400;0,600;0,700;0,800;1,100;1,200;1,400;1,500;1,700&display=swap");
+* {
+  font-family: "Montserrat", sans-serf;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+label {
+  font-weight: bold;
+}
+h1 {
+  font-size: 2rem;
+  color: rgb(195, 202, 210);
+  text-align: center;
+}
+h2 {
+  font-size: 1rem;
+  color: rgb(237, 237, 237);
+}
+
+label {
+  font-size: 1.5rem;
+  position: relative;
+  color: aliceblue;
+}
+main {
+  display: grid;
+  place-content: center;
+  height: 100vh;
+  margin: 0 auto;
+  gap: 2em;
+  max-width: 600px;
+}
+body {
+  background-color: rgba(3, 32, 52, 0.879);
+}
+
+.password_container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  max-width: 600px;
+  justify-content: space-between;
+  border: 2px solid rgb(219, 206, 197);
+  padding: 1em;
+}
+
+#copy_btn {
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  position: relative;
+  color: white;
+}
+.container {
+  display: grid;
+  gap: 1em;
+  width: 600px;
+  max-width: 600px;
+}
+.strength {
+  font-size: 1.2rem;
+  color: aliceblue;
+}
+.form_control:not(.chr_length) {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+.form_control:not(.chr_length) label {
+  font-weight: 400;
+}
+input[type="checkbox"] {
+  opacity: 0;
+}
+input[type="range"] {
+  display: block;
+  width: 100%;
+  accent-color: rgb(29, 138, 206);
+}
+input[type="checkbox"] + label::before {
+  content: "";
+  display: flex;
+  justify-content: center;
+  padding: 0.1em;
+  align-items: center;
+  color: white;
+  position: absolute;
+  width: 1.5rem;
+  height: 1.5rem;
+  top: 50%;
+  transform: translate(-20px, -50%);
+  left: -20px;
+  border: 1px solid white;
+}
+input[type="checkbox"]:checked + label::before {
+  content: "\2713";
+  border: 2px solid white !important;
+}
+
+.chr_length {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+  gap: 1em;
+  margin-bottom: 1em;
+}
+h3 {
+  font-size: 1.5rem;
+  color: white;
+}
+#generate-btn {
+  padding: 0.5em;
+  background-color: rgb(14, 118, 209);
+  color: white;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+#generate-btn:is(:hover, :focus) {
+  filter: brightness(80%);
+  transition: 0.5s;
+}
+.msg_copied {
+  position: absolute;
+  font-size: 0.7rem;
+  font-weight: bold;
+  display: none;
+  bottom: -40%;
+  left: -40%;
+}
+.strength_container {
+  display: grid;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 50%;
+}
+@media (max-width: 600px) {
+  .container {
+    width: 400px;
+    max-width: 360px;
+    padding: 1em;
+  }
+  h2 {
+    font-size: 0.7rem;
+  }
+  label {
+    font-size: 1rem;
+  }
+  .password_container {
+    width: 340px;
+    margin: 0 auto;
+    padding: 15px;
+  }
+  #password {
+    font-size: 0.6rem;
+  }
+  input[type="range"] {
+    width: 100%;
+  }
+  h3 {
+    font-size: 1.1rem;
+  }
+  .strength_container {
+    width: 55%;
+    align-items: center;
+  }
+}
+h1:first-letter {
+  font-size: 12vw;
+}
